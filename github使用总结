@@ -1,0 +1,32 @@
+1、添加新的文件，提交
+   首先进入新文件(time.c)所在的文件夹，然后执行如下操作
+   git add time.c                         /*表示新加入time.c文件*/
+   git commit -m "add file time.c"        /*填写提交代码的描述*/
+   git push                               /*提交*/
+
+
+2、删除文件，提交
+   首先进入要删除的文件(time.c)所在的文件夹，然后执行如下操作
+   git rm time.c                           /*表示新加入time.c文件*/
+   git commit -m "rm file time.c"          /*填写提交代码的描述*/
+   git push                                /*提交*/
+                         
+3、修改代码后，提交 
+
+   首先进入修改文件所在的文件夹，然后执行如下操作
+   git add .                             /*表示没有新加入任何的文件*/
+   git commit -m "update"                /*填写提交代码的描述*/
+   git push                              /*提交修改*/
+
+4、linux上新建的一个工程如何上传到github
+   cd my_project                         /*进入本地工程所在的目录*/
+   git init								 /*初始化一个git仓库*/
+   git add -A                            /*将该文件夹下面的所有文件都加入git仓库*/
+   git status							 /*查看当前仓库中，所有文件的状态*/
+   git commit -m “First commit”          /*设置简要的说明*/
+   在github上面建立仓库                  /*登录github网页创建一个项目*/
+   git remote add origin [https_url]     /*添加远程库，上一步创建的项目的地址*/
+   git pull								 /*将远程存储库中的更改合并到当前分支中*/
+   git push –force origin master	     /*将文件推送到github*/
+   
+   经过以上的操作之后，在github上，查看项目文件下面，如果文件都同步过去了，说明操作完成。
